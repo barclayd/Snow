@@ -19,7 +19,7 @@ window.onload = () => {
     for (let i = 0; i < maxSnowflakes; i++) {
 
         // radius between 2 and 7px
-        // minimum density of 1
+        // minimum density of 1 - controls how quickly the snowflake falls down
         snowflakes.push({
             x: Math.random() * W,
             y: Math.random() * H,
@@ -66,4 +66,7 @@ window.onload = () => {
             }
         }
     }
+    setInterval(() => {
+        drawSnowflakes();
+    }, 25);
 };
